@@ -156,7 +156,6 @@
 			<button id="btn_redirect_terminal" class='btn btn-arduino'>
 			    <span class="fa fa-arrow-right fa-1_5x fa-fw"> </span>
 			</button>
-
 			<button id="btn_upload_firmware" class='btn btn-arduino'>
 			    <span class="fa fa-arrow-up fa-1_5x fa-fw"> </span>
 			</button>
@@ -403,6 +402,15 @@
 </body>
 
 <script type="text/javascript">
+
+	document.getElementById('btn_redirect_terminal').addEventListener('click', function() {
+	    window.location.href = 'terminal/index.html';
+	});
+
+	document.getElementById('btn_upload_firmware').addEventListener('click', function() {
+	    window.location.href = 'upload-firmware/index.html';
+	});
+
 	var config = {
 		microPythonApi: microPythonApi,
 		translate: language,
