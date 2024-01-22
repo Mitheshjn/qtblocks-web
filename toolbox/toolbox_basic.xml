@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolbox>
+	<parametre id="defaultCategories">CAT_LOGIC</parametre>
+	<category name="CAT_LOGIC" colour="#ffb400">
+		<block type="controls_if"></block>
+		<block type="logic_compare"></block>
+		<block type="logic_operation"></block>
+		<block type="logic_negate"></block>
+		<block type="logic_boolean"></block>
+		<block type="logic_null"></block>
+		<block type="logic_ternary"></block>
+	</category>
+</toolbox>

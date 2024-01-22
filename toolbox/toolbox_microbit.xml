@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<toolbox>
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_TEXT,CAT_LIST,CAT_DICTONARY,CAT_SET,CAT_TUPLE,CAT_COLOUR,CAT_VARIABLE,CAT_FUNCTION,Conversions,Microbit</parametre>
+	<category name="CAT_LOGIC" colour="#ffb400">
+		<block type="controls_if">
+		</block>
+		<block type="logic_compare">
+		</block>
+		<block type="logic_operation">
+		</block>
+		<block type="logic_negate">
+		</block>
+		<block type="logic_boolean">
+		</block>
+		<block type="logic_null">
+		</block>
+		<block type="logic_ternary">
+		</block>
+	</category>
+	<category name="CAT_LOOPS" colour="#123456">
+		<block type="controls_repeat_ext">
+			<value name="TIMES">
+				<shadow type="math_number">
+					<field name="NUM">
+						10
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_whileUntil">
+		</block>
+		<block type="controls_for">
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">
+						10
+					</field>
+				</shadow>
+			</value>
+			<value name="BY">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_forEach">
+		</block>
+		<block type="controls_flow_statements">
+		</block>
+	</category>
+	<category name="CAT_MATH" colour="#008000">
+		<block type="math_number">
+			<field name="NUM">
+				123
+			</field>
+		</block>
+		<block type="math_arithmetic">
+			<value name="A">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+			<value name="B">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_single">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">
+						9
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_trig">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">
+						45
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_constant">
+		</block>
+		<block type="math_number_property">
+			<value name="NUMBER_TO_CHECK">
+				<shadow type="math_number">
+					<field name="NUM">
+						0
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_round">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">
+						3.1
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_on_list">
+		</block>
+		<block type="math_modulo">
+			<value name="DIVIDEND">
+				<shadow type="math_number">
+					<field name="NUM">
+						64
+					</field>
+				</shadow>
+			</value>
+			<value name="DIVISOR">
+				<shadow type="math_number">
+					<field name="NUM">
+						10
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_constrain">
+			<value name="VALUE">
+				<shadow type="math_number">
+					<field name="NUM">
+						50
+					</field>
+				</shadow>
+			</value>
+			<value name="LOW">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+			<value name="HIGH">
+				<shadow type="math_number">
+					<field name="NUM">
+						100
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_int">
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">
+						100
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_float">
+		</block>
+	</category>
+	<category name="CAT_TEXT" colour="160">
+		<block type="text">
+		</block>
+		<block type="text_join">
+		</block>
+		<block type="text_append">
+			<value name="TEXT">
+				<shadow type="text">
+				</shadow>
+			</value>
+		</block>
+		<block type="text_length">
+			<value name="VALUE">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_isEmpty">
+			<value name="VALUE">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_indexOf">
+			<value name="VALUE">
+				<block type="variables_get">
+					<field name="VAR">text</field>
+				</block>
+			</value>
+			<value name="FIND">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_charAt">
+			<value name="VALUE">
+				<block type="variables_get">
+					<field name="VAR">text</field>
+				</block>
+			</value>
+		</block>
+		<block type="text_getSubstring">
+			<value name="STRING">
+				<block type="variables_get">
+					<field name="VAR">text</field>
+				</block>
+			</value>
+		</block>
+		<block type="text_changeCase">
+			<value name="TEXT">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_trim">
+			<value name="TEXT">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="replace"></block>
+		<block type="check_string"></block>
+		<block type="text_print">
+			<value name="TEXT">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_prompt_ext">
+			<value name="TEXT">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_LIST" colour="260">
+		<block type="lists_create_with">
+			<mutation items="0">
+			</mutation>
+		</block>
+		<block type="lists_create_with">
+		</block>
+		<block type="lists_repeat">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">5</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lists_length">
+		</block>
+		<block type="lists_isEmpty">
+		</block>
+		<block type="lists_indexOf">
+			<value name="VALUE">
+				<block type="variables_get">
+					<field name="VAR">list</field>
+				</block>
+			</value>
+		</block>
+		<block type="lists_getIndex">
+			<value name="VALUE">
+				<block type="variables_get">
+					<field name="VAR">list</field>
+				</block>
+			</value>
+		</block>
+		<block type="lists_setIndex">
+			<value name="LIST">
+				<block type="variables_get">
+					<field name="VAR">list</field>
+				</block>
+			</value>
+		</block>
+		<block type="lists_getSublist">
+			<value name="LIST">
+				<block type="variables_get">
+					<field name="VAR">list</field>
+				</block>
+			</value>
+		</block>
+
+		<block type="lists_split">
+			<value name="DELIM">
+				<shadow type="text">
+					<field name="TEXT">,</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lists_sort"></block>
+	</category>
+	<category id="CAT_DICTONARY" colour="345" name="Dictonary">
+		<block type="dicts_create_with">
+		</block>
+		<block type="dicts_add_or_change">
+		</block>
+		<block type="dicts_delete">
+		</block>
+		<block type="dicts_get_value">
+		</block>
+		<block type="dicts_length">
+		</block>
+		<block type="dicts_clear">
+		</block>
+		<block type="dicts_copy">
+		</block>
+		<block type="dicts_get">
+		</block>
+		<block type="dicts_get_items">
+		</block>
+		<block type="dicts_update">
+		</block>
+		<block type="dicts_pop_item">
+		</block>
+		<block type="dicts_get_pop">
+		</block>
+	</category>
+	<category name="CAT_SET" colour="100">
+		<block type="set_create_with">
+		</block>
+		<block type="set_length">
+		</block>
+		<block type="set_add">
+		</block>
+		<block type="set_clear">
+		</block>
+		<block type="set_copy">
+		</block>
+		<block type="set_get_difference_intersection">
+		</block>
+		<block type="set_issubset">
+		</block>
+		<block type="set_pop_with_return">
+		</block>
+		<block type="set_pop_without_return">
+		</block>
+		<block type="set_remove">
+		</block>
+		<block type="set_update">
+		</block>
+	</category>
+	<category name="CAT_TUPLE" colour="250">
+		<block type="tuple_create_with">
+		</block>
+		<block type="tuple_count">
+		</block>
+		<block type="tuple_search_index">
+		</block>
+		<block type="tuple_compare">
+		</block>
+		<block type="tuple_length">
+		</block>
+		<block type="tuple_max">
+		</block>
+		<block type="tuple_min">
+		</block>
+	</category>
+	<category name="CAT_COLOUR" colour="20">
+		<block type="colour_picker">
+		</block>
+		<block type="colour_random">
+		</block>
+		<block type="colour_rgb">
+			<value name="RED">
+				<shadow type="math_number">
+					<field name="NUM">
+						100
+					</field>
+				</shadow>
+			</value>
+			<value name="GREEN">
+				<shadow type="math_number">
+					<field name="NUM">
+						50
+					</field>
+				</shadow>
+			</value>
+			<value name="BLUE">
+				<shadow type="math_number">
+					<field name="NUM">
+						0
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="colour_blend">
+			<value name="COLOUR1">
+				<shadow type="colour_picker">
+					<field name="COLOUR">
+						#ff0000
+					</field>
+				</shadow>
+			</value>
+			<value name="COLOUR2">
+				<shadow type="colour_picker">
+					<field name="COLOUR">
+						#3333ff
+					</field>
+				</shadow>
+			</value>
+			<value name="RATIO">
+				-
+				<shadow type="math_number">
+					<field name="NUM">
+						0.5
+					</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_VARIABLE" colour="330" custom="VARIABLE">
+	</category>
+	<category name="CAT_FUNCTION" colour="290" custom="PROCEDURE">
+	</category>
+	<category name="Conversions" colour="240">
+		<block type="return_int"></block>
+		<block type="return_string"></block>
+		<block type="type_of"></block>
+		<block type="byte_conversion"></block>
+	</category>
+	<category name="Microbit" colour="123" expanded="true">
+		<category name="Accelerometer" colour="0">
+			<block type="microbit_accelerometer_get_x">
+			</block>
+			<block type="microbit_accelerometer_get_y">
+			</block>
+			<block type="microbit_accelerometer_get_z">
+			</block>
+			<block type="microbit_accelerometer_was_gesture">
+			</block>
+			<block type="microbit_accelerometer_is_gesture">
+			</block>
+			<block type="microbit_accelerometer_get_gestures">
+			</block>
+			<block type="microbit_accelerometer_current_gesture">
+			</block>
+		</category>
+		<category name="Buttons" colour = "222">
+			<block type="microbit_button_is_pressed"></block>
+			<block type="microbit_button_was_pressed"></block>
+			<block type="microbit_button_get_presses"></block>
+		</category>
+		<category name="Compass" colour="64">
+			<block type="microbit_compass_calibrate">
+			</block>
+			<block type="microbit_compass_is_calibrated">
+			</block>
+			<block type="microbit_compass_heading">
+			</block>
+			<block type="microbit_compass_get_field_strength">
+			</block>
+		</category>
+		<category name="Display" colour="96">
+			<block type="microbit_display_get_pixel">
+				<value name="x">
+					<shadow type="math_number">
+						<field name="NUM">
+							0
+						</field>
+					</shadow>
+				</value>
+				<value name="y">
+					<shadow type="math_number">
+						<field name="NUM">
+							0
+						</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_display_set_pixel">
+				<value name="x">
+					<shadow type="math_number">
+						<field name="NUM">
+							0
+						</field>
+					</shadow>
+				</value>
+				<value name="y">
+					<shadow type="math_number">
+						<field name="NUM">
+							0
+						</field>
+					</shadow>
+				</value>
+				<value name="value">
+					<shadow type="math_number">
+						<field name="NUM">
+							9
+						</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_display_clear">
+			</block>
+			<block type="microbit_display_show_image">
+			</block>
+			<block type="microbit_display_show_number">
+			</block>
+			<block type="microbit_display_show_animation">
+			</block>
+			<block type="microbit_display_scroll">
+				<value name="message">
+					<shadow type="text">
+						<field name="TEXT">Hello, World!</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_display_on">
+			</block>
+			<block type="microbit_display_off">
+			</block>
+			<block type="microbit_display_is_on">
+			</block>
+			<block type="microbit_read_light_level">
+			</block>
+		</category>
+		<category name="Image" colour="128">
+			<block type="microbit_image_builtins">
+			</block>
+			<block type="microbit_image_copy">
+			</block>
+			<block type="microbit_image_invert">
+			</block>
+			<block type="microbit_image_create">
+			</block>
+		</category>
+		<category name="Time" colour="160">
+			<block type="microbit_microbit_panic">
+			</block>
+			<block type="microbit_microbit_reset">
+			</block>
+			<block type="microbit_microbit_sleep">
+				<value name="duration">
+					<shadow type="math_number">
+						<field name="NUM">
+							1000
+						</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_microbit_running_time">
+			</block>
+			<block type="microbit_microbit_temperature">
+			</block>
+		</category>
+		<category name="Music" colour="192">
+			<block type="microbit_music_play_built_in">
+			</block>
+			<block type="microbit_music_pitch">
+			</block>
+			<block type="microbit_music_play_list_of_notes">
+			</block>
+			<block type="microbit_music_reset">
+			</block>
+			<block type="microbit_music_stop">
+			</block>
+			<block type="microbit_music_set_tempo">
+				<value name="ticks">
+					<shadow type="math_number">
+						<field name="NUM">
+							4
+						</field>
+					</shadow>
+				</value>
+				<value name="bpm">
+					<shadow type="math_number">
+						<field name="NUM">
+							120
+						</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_music_get_tempo">
+			</block>
+		</category>
+		<category name="Pins" colour="256">
+			<block type="microbit_pin_touched">
+			</block>
+			<block type="microbit_pin_read_analog">
+			</block>
+			<block type="microbit_pin_write_analog">
+				<value name="output">
+					<shadow type="math_number">
+						<field name="NUM">
+							0
+						</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_pin_read_digital">
+			</block>
+			<block type="microbit_pin_write_digital">
+				<value name="output">
+					<shadow type="math_number">
+						<field name="NUM">
+							0
+						</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="Radio" colour="288">
+			<block type="microbit_radio_on">
+			</block>
+			<block type="microbit_radio_off">
+			</block>
+			<block type="microbit_radio_config">
+			</block>
+			<block type="microbit_radio_reset">
+			</block>
+			<block type="microbit_radio_send_string">
+				<value name="message">
+					<shadow type="text">
+						<field name="TEXT">
+							Some text
+						</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_radio_receive">
+			</block>
+		</category>
+		<category name="Speech" colour="320">
+			<block type="microbit_speech_say">
+				<value name="english">
+					<shadow type="text">
+						<field name="TEXT">
+							Exterminate!
+						</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_speech_pronounce">
+				<value name="phonemes">
+					<shadow type="text">
+						<field name="TEXT">
+							/HEH5EH4EH3EH2EH2EH3EH4EH5EHLP.
+						</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="microbit_speech_sing">
+				<value name="song">
+					<shadow type="text">
+						<field name="TEXT">
+							#115DOWWWW
+						</field>
+					</shadow>
+				</value>
+			</block>
+		</category>
+		<category name="UART" colour="350">
+		<block type="microbit_uart_write"></block>	
+		<block type="microbit_uart_read"></block>
+		</category>
+	</category>
+</toolbox>

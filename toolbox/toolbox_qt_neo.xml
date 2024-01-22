@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<toolbox>
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_TEXT,CAT_LIST,CAT_DICTONARY,CAT_SET,CAT_TUPLE,CAT_COLOUR,CAT_VARIABLE,CAT_FUNCTION,Conversions,Code_and_Comments,QtPi_Neo,Connectivity,Services,System</parametre>
+	<category name="CAT_LOGIC" colour="#ffb400">
+		<block type="controls_if">
+		</block>
+		<block type="logic_compare">
+		</block>
+		<block type="logic_operation">
+		</block>
+		<block type="logic_negate">
+		</block>
+		<block type="logic_boolean">
+		</block>
+		<block type="logic_null">
+		</block>
+		<block type="logic_ternary">
+		</block>
+	</category>
+	<category name="CAT_LOOPS" colour="#123456">
+		<block type="controls_repeat_ext">
+			<value name="TIMES">
+				<shadow type="math_number">
+					<field name="NUM">
+						10
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_whileUntil">
+		</block>
+		<block type="controls_for">
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">
+						10
+					</field>
+				</shadow>
+			</value>
+			<value name="BY">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="controls_forEach">
+		</block>
+		<block type="controls_flow_statements">
+		</block>
+	</category>
+	<category name="CAT_MATH" colour="#008000">
+		<block type="math_number">
+			<field name="NUM">
+				123
+			</field>
+		</block>
+		<block type="math_arithmetic">
+			<value name="A">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+			<value name="B">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_single">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">
+						9
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_trig">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">
+						45
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_constant">
+		</block>
+		<block type="math_number_property">
+			<value name="NUMBER_TO_CHECK">
+				<shadow type="math_number">
+					<field name="NUM">
+						0
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_round">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">
+						3.1
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_on_list">
+		</block>
+		<block type="math_modulo">
+			<value name="DIVIDEND">
+				<shadow type="math_number">
+					<field name="NUM">
+						64
+					</field>
+				</shadow>
+			</value>
+			<value name="DIVISOR">
+				<shadow type="math_number">
+					<field name="NUM">
+						10
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_constrain">
+			<value name="VALUE">
+				<shadow type="math_number">
+					<field name="NUM">
+						50
+					</field>
+				</shadow>
+			</value>
+			<value name="LOW">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+			<value name="HIGH">
+				<shadow type="math_number">
+					<field name="NUM">
+						100
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_int">
+			<value name="FROM">
+				<shadow type="math_number">
+					<field name="NUM">
+						1
+					</field>
+				</shadow>
+			</value>
+			<value name="TO">
+				<shadow type="math_number">
+					<field name="NUM">
+						100
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="math_random_float">
+		</block>
+	</category>
+	<category name="CAT_TEXT" colour="160">
+		<block type="text">
+		</block>
+		<block type="text_join">
+		</block>
+		<block type="text_append">
+			<value name="TEXT">
+				<shadow type="text">
+				</shadow>
+			</value>
+		</block>
+		<block type="text_length">
+			<value name="VALUE">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_isEmpty">
+			<value name="VALUE">
+				<shadow type="text">
+					<field name="TEXT"></field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_indexOf">
+			<value name="VALUE">
+				<block type="variables_get">
+					<field name="VAR">text</field>
+				</block>
+			</value>
+			<value name="FIND">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_charAt">
+			<value name="VALUE">
+				<block type="variables_get">
+					<field name="VAR">text</field>
+				</block>
+			</value>
+		</block>
+		<block type="text_getSubstring">
+			<value name="STRING">
+				<block type="variables_get">
+					<field name="VAR">text</field>
+				</block>
+			</value>
+		</block>
+		<block type="text_changeCase">
+			<value name="TEXT">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_trim">
+			<value name="TEXT">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="replace"></block>
+		<block type="check_string"></block>
+		<block type="text_print">
+			<value name="TEXT">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="text_prompt_ext">
+			<value name="TEXT">
+				<shadow type="text">
+					<field name="TEXT">abc</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_LIST" colour="260">
+		<block type="lists_create_with">
+			<mutation items="0">
+			</mutation>
+		</block>
+		<block type="lists_create_with">
+		</block>
+		<block type="lists_repeat">
+			<value name="NUM">
+				<shadow type="math_number">
+					<field name="NUM">5</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lists_length">
+		</block>
+		<block type="lists_isEmpty">
+		</block>
+		<block type="lists_indexOf">
+			<value name="VALUE">
+				<block type="variables_get">
+					<field name="VAR">list</field>
+				</block>
+			</value>
+		</block>
+		<block type="lists_getIndex">
+			<value name="VALUE">
+				<block type="variables_get">
+					<field name="VAR">list</field>
+				</block>
+			</value>
+		</block>
+		<block type="lists_setIndex">
+			<value name="LIST">
+				<block type="variables_get">
+					<field name="VAR">list</field>
+				</block>
+			</value>
+		</block>
+		<block type="lists_getSublist">
+			<value name="LIST">
+				<block type="variables_get">
+					<field name="VAR">list</field>
+				</block>
+			</value>
+		</block>
+
+		<block type="lists_split">
+			<value name="DELIM">
+				<shadow type="text">
+					<field name="TEXT">,</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="lists_sort"></block>
+	</category>
+	<category id="CAT_DICTONARY" colour="345" name="Dictonary">
+		<block type="dicts_create_with">
+		</block>
+		<block type="dicts_add_or_change">
+		</block>
+		<block type="dicts_delete">
+		</block>
+		<block type="dicts_get_value">
+		</block>
+		<block type="dicts_length">
+		</block>
+		<block type="dicts_clear">
+		</block>
+		<block type="dicts_copy">
+		</block>
+		<block type="dicts_get">
+		</block>
+		<block type="dicts_get_items">
+		</block>
+		<block type="dicts_update">
+		</block>
+		<block type="dicts_pop_item">
+		</block>
+		<block type="dicts_get_pop">
+		</block>
+	</category>
+	<category name="CAT_SET" colour="100">
+		<block type="set_create_with">
+		</block>
+		<block type="set_length">
+		</block>
+		<block type="set_add">
+		</block>
+		<block type="set_clear">
+		</block>
+		<block type="set_copy">
+		</block>
+		<block type="set_get_difference_intersection">
+		</block>
+		<block type="set_issubset">
+		</block>
+		<block type="set_pop_with_return">
+		</block>
+		<block type="set_pop_without_return">
+		</block>
+		<block type="set_remove">
+		</block>
+		<block type="set_update">
+		</block>
+	</category>
+	<category name="CAT_TUPLE" colour="250">
+		<block type="tuple_create_with">
+		</block>
+		<block type="tuple_count">
+		</block>
+		<block type="tuple_search_index">
+		</block>
+		<block type="tuple_compare">
+		</block>
+		<block type="tuple_length">
+		</block>
+		<block type="tuple_max">
+		</block>
+		<block type="tuple_min">
+		</block>
+	</category>
+	<category name="CAT_COLOUR" colour="20">
+		<block type="colour_picker">
+		</block>
+		<block type="colour_random">
+		</block>
+		<block type="colour_rgb">
+			<value name="RED">
+				<shadow type="math_number">
+					<field name="NUM">
+						100
+					</field>
+				</shadow>
+			</value>
+			<value name="GREEN">
+				<shadow type="math_number">
+					<field name="NUM">
+						50
+					</field>
+				</shadow>
+			</value>
+			<value name="BLUE">
+				<shadow type="math_number">
+					<field name="NUM">
+						0
+					</field>
+				</shadow>
+			</value>
+		</block>
+		<block type="colour_blend">
+			<value name="COLOUR1">
+				<shadow type="colour_picker">
+					<field name="COLOUR">
+						#ff0000
+					</field>
+				</shadow>
+			</value>
+			<value name="COLOUR2">
+				<shadow type="colour_picker">
+					<field name="COLOUR">
+						#3333ff
+					</field>
+				</shadow>
+			</value>
+			<value name="RATIO">
+				-
+				<shadow type="math_number">
+					<field name="NUM">
+						0.5
+					</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
+	<category name="CAT_VARIABLE" colour="330" custom="VARIABLE">
+	</category>
+	<category name="CAT_FUNCTION" colour="290" custom="PROCEDURE">
+	</category>
+	<category name="Conversions" colour="240">
+		<block type="return_int"></block>
+		<block type="return_string"></block>
+		<block type="type_of"></block>
+	</category>
+	<category name="Code_and_Comments" colour="200">
+		<block type="procedures_main_function">
+		</block>
+		<block type="procedures_code_block">
+		</block>
+		<block type="procedures_output_code_block">
+		</block>
+		<block type="comment_text">
+		</block>
+		<block type="comment">
+		</block>
+		<block type="comment_create_with">
+		</block>
+		<block type="try_except"></block>
+		<block type="try_except_with_type"></block>
+	</category>
+	<category name="QtPi_Neo" colour="224" expanded="true">
+		<category name="Actuators" colour="200">
+			<category name="ARGB" colour="224">
+				<block type="qtpi_argb_initialize">
+				</block>
+				<block type="qtpi_argb_clear">
+				</block>
+				<block type="qtpi_argb_clear_all">
+				</block>
+				<block type="qtpi_argb_show">
+				</block>
+				<block type="qtpi_argb_red">
+				</block>
+				<block type="qtpi_argb_green">
+				</block>
+				<block type="qtpi_argb_blue">
+				</block>
+				<block type="qtpi_argb_orange">
+				</block>
+				<block type="qtpi_argb_violet">
+				</block>
+				<block type="qtpi_argb_indigo">
+				</block>
+				<block type="qtpi_argb_white">
+				</block>
+				<block type="qtpi_argb_yellow">
+				</block>
+				<block type="qtpi_argb_set">
+					<value name="red">
+						<shadow type="math_number">
+							<field name="NUM">
+								255
+							</field>
+						</shadow>
+					</value>
+					<value name="green">
+						<shadow type="math_number">
+							<field name="NUM">
+								255
+							</field>
+						</shadow>
+					</value>
+					<value name="blue">
+						<shadow type="math_number">
+							<field name="NUM">
+								255
+							</field>
+						</shadow>
+					</value>
+				</block>
+				<block type="qtpi_argb_blink">
+					<value name="red">
+						<shadow type="math_number">
+							<field name="NUM">
+								255
+							</field>
+						</shadow>
+					</value>
+					<value name="green">
+						<shadow type="math_number">
+							<field name="NUM">
+								255
+							</field>
+						</shadow>
+					</value>
+					<value name="blue">
+						<shadow type="math_number">
+							<field name="NUM">
+								255
+							</field>
+						</shadow>
+					</value>
+					<value name="count">
+						<shadow type="math_number">
+							<field name="NUM">
+								10
+							</field>
+						</shadow>
+					</value>
+					<value name="interval">
+						<shadow type="math_number">
+							<field name="NUM">
+								500
+							</field>
+						</shadow>
+					</value>
+				</block>
+			</category>
+			<category name="Buzzer" colour="32">
+				<block type="qtpi_buzzer_initialize">
+				</block>
+				<block type="qtpi_buzzer_on">
+				</block>
+				<block type="qtpi_buzzer_off">
+				</block>
+				<block type="qtpi_buzzer_buzz">
+					<value name="secs">
+						<shadow type="math_number">
+							<field name="NUM">
+								1
+							</field>
+						</shadow>
+					</value>
+				</block>
+			</category>
+			<category name="LED" colour="210">
+				<block type="qtpi_led_initialize">
+				</block>
+				<block type="qtpi_led_brightness">
+					<value name="brightness">
+						<shadow type="math_number">
+							<field name="NUM">
+								0
+							</field>
+						</shadow>
+					</value>
+				</block>
+				<block type="qtpi_led_on">
+				</block>
+				<block type="qtpi_led_off">
+				</block>
+			</category>
+			<category name="Motor" colour="110">
+				<block type="qtpi_motor_initialize">
+				</block>
+				<block type="qtpi_motor_rotate">
+				</block>
+			</category>
+			<category name="OLED" colour="180">
+				<block type="qtpi_display_oled_initialize">
+				</block>
+				<block type="qtpi_display_oled_clear">
+				</block>
+				<block type="qtpi_display_oled_show">
+				</block>
+				<block type="qtpi_display_oled_draw_pixel">
+				</block>
+				<block type="qtpi_display_oled_draw_text">
+				</block>
+			</category>
+			<category name="PumpMotor" colour="110">
+				<block type="qtpi_pumpmotor_initialize">
+				</block>
+				<block type="qtpi_pumpmotor_run">
+				</block>
+			</category>
+			<category name="Servo" colour="230">
+				<block type="qtpi_servo_initialize">
+					<value name="step">
+						<shadow type="math_number">
+							<field name="NUM">
+								10
+							</field>
+						</shadow>
+					</value>
+					<value name="delay">
+						<shadow type="math_number">
+							<field name="NUM">
+								10
+							</field>
+						</shadow>
+					</value>
+				</block>
+				<block type="qtpi_servo_rotate">
+					<value name="degrees">
+						<shadow type="math_number">
+							<field name="NUM">
+								0
+							</field>
+						</shadow>
+					</value>
+				</block>
+				<block type="qtpi_servo_sweep">
+				</block>
+				<block type="qtpi_servo_current_position">
+				</block>
+			</category>
+		</category>
+		<category name="Sensors" colour="200">
+			<category name="APDS" colour="224">
+				<block type="qtpi_apds_initialize">
+				</block>
+				<block type="qtpi_apds_enable_gesture">
+				</block>
+				<block type="qtpi_apds_disable_gesture">
+				</block>
+				<block type="qtpi_apds_read_gesture">
+				</block>
+				<block type="qtpi_apds_enable_proximity">
+				</block>
+				<block type="qtpi_apds_disable_proximity">
+				</block>
+				<block type="qtpi_apds_read_proximity">
+				</block>
+				<block type="qtpi_apds_enable_lightsensor">
+				</block>
+				<block type="qtpi_apds_disable_lightsensor">
+				</block>
+				<block type="qtpi_apds_read_ambient">
+				</block>
+				<block type="qtpi_apds_read_red">
+				</block>
+				<block type="qtpi_apds_read_green">
+				</block>
+				<block type="qtpi_apds_read_blue">
+				</block>
+			</category>
+			<category name="Gas" colour="224">
+				<block type="qtpi_gas_initialize">
+				</block>
+				<block type="qtpi_gas_activate">
+				</block>
+				<block type="qtpi_gas_deactivate">
+				</block>
+				<block type="qtpi_gas_read">
+				</block>
+			</category>
+			<!--<category name="Gyro" colour="244">
+				<block type="qtpi_gyro_initialize">
+				</block>
+				<block type="qtpi_read_gyro">
+				</block>
+				<block type="qtpi_read_accelerometer_values">
+				</block>
+				<block type="qtpi_read_temperature_value">
+				</block>
+			</category>-->
+			<category name="InfraRed" colour="278">
+				<block type="qtpi_infrared_initialize">
+				</block>
+				<block type="qtpi_infrared_enable">
+				</block>
+				<block type="qtpi_infrared_read">
+				</block>
+			</category>
+			<category name="LDR" colour="165">
+				<block type="qtpi_ldr_initialize">
+				</block>
+				<block type="qtpi_ldr_read">
+				</block>
+				<block type="qtpi_ldr_enable">
+				</block>
+				<block type="qtpi_ldr_disable">
+				</block>
+			</category>
+			<category name="LimitSwitch" colour="110">
+				<block type="qtpi_limitswitch_initialize">
+				</block>
+				<block type="qtpi_limitswitch_status">
+				</block>
+				<block type="qtpi_limitswitch_enable">
+				</block>
+				<block type="qtpi_limitswitch_disable">
+				</block>
+			</category>
+			<category name="MPU6050" colour="224">
+				<block type="qtpi_mpu6050_initialize">
+				</block>
+				<block type="qtpi_mpu6050_enable_gyro">
+				</block>
+				<block type="qtpi_mpu6050_disable_gyro">
+				</block>
+				<block type="qtpi_mpu6050_get_gyro">
+				</block>
+				<block type="qtpi_mpu6050_enable_accel">
+				</block>
+				<block type="qtpi_mpu6050_disable_accel">
+				</block>
+				<block type="qtpi_mpu6050_get_accel">
+				</block>
+				<block type="qtpi_mpu6050_enable_temp">
+				</block>
+				<block type="qtpi_mpu6050_disable_temp">
+				</block>
+				<block type="qtpi_mpu6050_get_temp">
+				</block>
+				<block type="qtpi_mpu6050_get_mpu6050">
+				</block>
+			</category>
+			<category name="Temperature" colour="120">
+				<block type="qtpi_temperature_initialize">
+				</block>
+				<block type="qtpi_temperature_read">
+				</block>
+			</category>
+			<category name="TOF" colour="180">
+				<block type="qtpi_tof_initialize">
+				</block>
+				<block type="qtpi_tof_read_distance">
+				</block>
+				<block type="qtpi_tof_enable">
+				</block>
+				<block type="qtpi_tof_disable">
+				</block>
+			</category>
+			<category name="UltraSonic" colour="150">
+				<block type="qtpi_ultrasonic_initialize">
+				</block>
+				<block type="qtpi_ultrasonic_read_cm">
+				</block>
+				<block type="qtpi_ultrasonic_read_mm">
+				</block>
+			</category>
+		</category>
+	</category>
+	<category name="Connectivity" colour="260">
+		<category name="Bluetooth" colour="200">
+			
+			<category name="QtBLE Service" colour="220">
+				<block type="init_ble_object">
+				</block>
+				<block type="qtbleservice">
+				</block>
+				<block type="QtBLE_create_with">
+				</block>
+				<block type="start_advertising">
+				</block>
+				<block type="qtpi_ble_start_service">
+				</block>
+			</category>
+		</category>
+		<category name="WiFi" colour="180">
+			<category name="Client" colour="100">
+				<block type="qtpi_connect_to_wifi">
+				</block>
+				<block type="qtpi_get_ip">
+				</block>
+			</category>
+		</category>
+		<!--
+		<category name="WebSocket" colour="100">
+			<category name="Client" colour="200">
+				<block type="qtpi_websocket_client_create">
+				</block>
+				<block type="qtpi_websocket_client_connect">
+				</block>
+				<block type="qtpi_websocket_client_register">
+				</block>
+				<block type="qtpi_websocket_client_disconnect">
+				</block>
+			</category>
+		</category>
+		-->
+	</category>
+	<!--
+	<category name="Services" expanded="true" colour="150">
+		<category name="Adapters" colour="140">
+			<category name="Service Adapter" colour="210">
+				<block type="qtpi_service_adapter"></block>
+				<block type="qtpi_service_adapter_start"></block>
+			</category>
+			<category name="Module Adapter" colour="210">
+				<block type="qtpi_module_adapter"></block>
+			</category>
+		</category>
+	</category>
+	-->
+	<category name="System" colour="60">
+		<block type="qtpi_neo_sleep_ms">
+		</block>
+		<block type="qtpi_neo_sleep">
+		</block>
+	</category>
+</toolbox>
