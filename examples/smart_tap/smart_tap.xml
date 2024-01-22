@@ -1,0 +1,97 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="Z.QbPwzKz,q_C~q^jR]v">ir</variable>
+    <variable id="1B[z,Nt[-8hR)jNPA-$F">pump_motor</variable>
+    <variable id="o@__7ANdMcCZI`X@Rz)c">irValue</variable>
+  </variables>
+  <block type="variables_set" id="RX`3MV:~85g+drrnO[k4" x="112" y="87">
+    <field name="VAR" id="Z.QbPwzKz,q_C~q^jR]v">ir</field>
+    <value name="VALUE">
+      <block type="qtpi_infrared_initialize" id="N*QHVA}q1cj!l|uc[kad">
+        <field name="port">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="|8CIPe:$:dhC@Q].~^T3">
+        <field name="VAR" id="1B[z,Nt[-8hR)jNPA-$F">pump_motor</field>
+        <value name="VALUE">
+          <block type="qtpi_pumpmotor_initialize" id="ss#rl=Q-/Gt[Rm2GrQP$">
+            <field name="port">1</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="n^6U:LTxlAP0^GSxQ6$n">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_boolean" id="rMaI)+#9qSD{),yL`V*|">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="variables_set" id="mD$NH5e$5DU|-Q^?}4b.">
+                <field name="VAR" id="o@__7ANdMcCZI`X@Rz)c">irValue</field>
+                <value name="VALUE">
+                  <block type="qtpi_infrared_read" id="CvGaJmg=D.Dke710AdS`">
+                    <value name="infrared_object">
+                      <block type="variables_get" id="6=w@6~V7upN[+[E.FGG%">
+                        <field name="VAR" id="Z.QbPwzKz,q_C~q^jR]v">ir</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="/1T~C$@Y30?ERHieKf~]">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="R1B#VE4[ZN[JWse9=rRf">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="variables_get" id="Yk^e$KjoDN.4)0)b+303">
+                            <field name="VAR" id="o@__7ANdMcCZI`X@Rz)c">irValue</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_boolean" id="T$A7QLODc914p%h6XY6f">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="qtpi_pumpmotor_run" id="r1PiY%-4clou.wb+28__">
+                        <value name="pumpmotor_object">
+                          <block type="variables_get" id=".B6FvnGdK=*qQ=:yjW?W">
+                            <field name="VAR" id="1B[z,Nt[-8hR)jNPA-$F">pump_motor</field>
+                          </block>
+                        </value>
+                        <value name="pumpmotor_speed">
+                          <block type="math_number" id="RJ^CM=J_W.!@Dwo.$|td">
+                            <field name="NUM">255</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="qtpi_pumpmotor_run" id="|VT]TIG#;s49+85;EKgC">
+                        <value name="pumpmotor_object">
+                          <block type="variables_get" id=".RZ}d/Fm5}J#rPv]Aa2k">
+                            <field name="VAR" id="1B[z,Nt[-8hR)jNPA-$F">pump_motor</field>
+                          </block>
+                        </value>
+                        <value name="pumpmotor_speed">
+                          <block type="math_number" id="1aKh3Z3mEr~zw.r)#Rr4">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml> 
