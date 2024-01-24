@@ -187,6 +187,48 @@
 			</button>
 		</div>
 	</div>
+
+	<div class="top-menu">
+    <div class="tabs">
+      <div id="tab_blocks" class="tabon">...</div>
+      <div id="tab_console" class="taboff">Console</div>
+      <div id="tab_files" class="taboff">...</div>
+      <div id="tab_programs" class="taboff" style="display: none;">...</div>
+      <div id="tab_device" class="taboff" style="display: none;">...</div>
+      <div id="tab_iot" class="taboff" style="display: none;">IOT</div>
+      <div id="tab_mqtt" class="taboff" style="display: none;" onclick='document.getElementById("easymqtt_iframe").contentWindow.startEasyMQTT(window.easyMQTT_session);'>EasyMQTT</div>
+      <div id="tab_databoard" class="taboff" style="display: none;">Databoard</div>
+    </div>
+    <button id="toolbarButton" class="notext icon medium" title="..."></button>
+    <div class="toolbar">
+    <div id="channel_connect">
+      <button class="icon" id="channelButton" title="Choose connection channel"></button>
+      <button class="icon" id="connectButton" title="Connect/Disconnect"></button>
+    </div>
+    <div class="icon" id="deviceSelect">
+      <select id="device_selector">
+        <option value="ESP32">ESP32</option>
+      </select>
+      <button id="runButton" class="notext primary icon" title="..."></button>
+    </div>
+
+      <button id="linkButton" class="notext icon" title="..."></button>
+
+      <button id="saveButton" class="notext icon" title="..."></button>
+
+      <label id="loadButton" for="loadXML"  class="notext button icon" title="..."></label>
+      <input name="XML" id="loadXML" type="file" accept=".xml" required="">
+
+      <!--<button id="trashButton" class="notext icon" title="..."></button>-->
+
+      <button id="notificationButton" class="notext icon" title="..." style="display: none;"></button>
+
+      <button id="forumButton" class="notext icon" title="..." style="display: none;"></button>
+
+      <button id="accountButton" class="notext icon" title="..." style="display: none;"></button>
+    </div>
+  </div>
+	
 	<div id="divBody" class="tab-content">
 		<div role="tabpanel" id="content_blocks" class="tab-pane fade in active" style="position: relative;">
 			<div id="toggle" class="modal-content" style="display: none;">
