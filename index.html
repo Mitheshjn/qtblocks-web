@@ -188,8 +188,8 @@
 		</div>
 	</div>
 	
-	<div id="main-content" class="main-content" style="display:none;">
-		<div id="content_console" class="content">
+	<div id="main-content" class="main-content" >
+		<div id="content_console" class="content" style="display:none;">
 	       <span class="icon" id="tipsGeneric"><tt>Ctrl+Insert</tt> to copy and <tt>Shift+Insert</tt> to paste</span>
 	    	<tr height="25%" id="termTR">
 	     		<td>
@@ -197,7 +197,7 @@
 	    				<div id="term" class="xterm"></div>
 	        		</div>
 	     		</td>
-	     	<td>
+	     		<td>
 		        <div id="file-boxes" >
 		            <button onclick="Tool.runPython(); return false;">Run block based program</button>
 		      		<br>
@@ -215,19 +215,7 @@
 	   		</tr>
 		</div>
 
-		<div id="content_device" class="content">
-		  	<center>
-			    <label id="device_title"><b>ESP8266</b><br></label>
-			  	<br>
-			  	<img id="device_img" src="devinfo/Node-MCU-ESP-12E-Pin-Out-Diagram2.jpg">
-			  	<br>
-			  	<label id="device_desc">
-			      <BR><BR><input type='button' onclick='loadDoc();' value='Open Documentation' /> <BR><BR>To use ESP32, simply connect to MicroPython board using Wifi. 
-			  	</label>
-		  	</center>
-		</div>
-
-		<div id="content_files" class="content">
+		<div id="content_files" class="content" style="display:none;">
 			<div id="file-boxes">
 				<div id="file-header">
 					<span>File manager</span>
@@ -491,9 +479,18 @@
 
 <script type="text/javascript">
 
-	var button = document.getElementById('btn_upload_firmware');
-	button.onclick = function() {
-		var x = document.getElementById("main-content");
+	var button1 = document.getElementById('btn_console');
+	button1.onclick = function() {
+		var x = document.getElementById("content_console");
+		if (x.style.display === "none") {
+		x.style.display = "block";
+		} else {
+		x.style.display = "none";
+		}
+	}
+	var button2 = document.getElementById('btn_upload_firmware');
+	button1.onclick = function() {
+		var x = document.getElementById("content_files");
 		if (x.style.display === "none") {
 		x.style.display = "block";
 		} else {
