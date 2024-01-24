@@ -188,46 +188,49 @@
 		</div>
 	</div>
 
-	<div class="top-menu">
-    <div class="tabs">
-      <div id="tab_blocks" class="tabon">...</div>
-      <div id="tab_console" class="taboff">Console</div>
-      <div id="tab_files" class="taboff">...</div>
-      <div id="tab_programs" class="taboff" style="display: none;">...</div>
-      <div id="tab_device" class="taboff" style="display: none;">...</div>
-      <div id="tab_iot" class="taboff" style="display: none;">IOT</div>
-      <div id="tab_mqtt" class="taboff" style="display: none;" onclick='document.getElementById("easymqtt_iframe").contentWindow.startEasyMQTT(window.easyMQTT_session);'>EasyMQTT</div>
-      <div id="tab_databoard" class="taboff" style="display: none;">Databoard</div>
+	<div id="content_console" class="content">
+       <span class="icon" id="tipsGeneric"><tt>Ctrl+Insert</tt> to copy and <tt>Shift+Insert</tt> to paste</span>
+    <tr height="25%" id="termTR">
+     <td>
+        <div style="display:inline-block; vertical-align:top; ">
+    <div id="term" class="xterm">
+            </div>
+        </div>
+     </td>
+     <td>
+        <div id="file-boxes" >
+
+            <button onclick="Tool.runPython(); return false;">Run block based program</button>
+      <br>
+      <br>
+            <button onclick="Tool.stopPython(); return false;">Stop running program</button>
+            <button onclick="Tool.softReset(); return false;">Soft reset device</button>
+      <br>
+      <br>
+      <button  onclick="Files.run(UI ['workspace'].content_file_name.value); return false;">Run edited Python File</button>
+      <br>
+      <br>
+      <button onclick="term.write('\x1bc');  ">Clear terminal output</button>
     </div>
-    <button id="toolbarButton" class="notext icon medium" title="..."></button>
-    <div class="toolbar">
-    <div id="channel_connect">
-      <button class="icon" id="channelButton" title="Choose connection channel"></button>
-      <button class="icon" id="connectButton" title="Connect/Disconnect"></button>
-    </div>
-    <div class="icon" id="deviceSelect">
-      <select id="device_selector">
-        <option value="ESP32">ESP32</option>
-      </select>
-      <button id="runButton" class="notext primary icon" title="..."></button>
-    </div>
+    
+    </td>
+   </tr>
+</div>
 
-      <button id="linkButton" class="notext icon" title="..."></button>
+<div id="content_device" class="content">
+  <center>
+    <label id="device_title"><b>ESP8266</b><br></label>
+  <br>
+  <img id="device_img" src="devinfo/Node-MCU-ESP-12E-Pin-Out-Diagram2.jpg">
+  <br>
 
-      <button id="saveButton" class="notext icon" title="..."></button>
+  <label id="device_desc">
+      <BR><BR><input type='button' onclick='loadDoc();' value='Open Documentation' /> <BR><BR>To use ESP32, simply connect to MicroPython board using Wifi. 
+  </label>
 
-      <label id="loadButton" for="loadXML"  class="notext button icon" title="..."></label>
-      <input name="XML" id="loadXML" type="file" accept=".xml" required="">
+  </center>
 
-      <!--<button id="trashButton" class="notext icon" title="..."></button>-->
-
-      <button id="notificationButton" class="notext icon" title="..." style="display: none;"></button>
-
-      <button id="forumButton" class="notext icon" title="..." style="display: none;"></button>
-
-      <button id="accountButton" class="notext icon" title="..." style="display: none;"></button>
-    </div>
-  </div>
+</div>
 	
 	<div id="divBody" class="tab-content">
 		<div role="tabpanel" id="content_blocks" class="tab-pane fade in active" style="position: relative;">
