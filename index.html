@@ -153,10 +153,10 @@
 			<button id="btn_flash" class='btn btn-arduino'>
 				<span class="fa fa-arrow-right fa-1_5x fa-fw"> </span>
 			</button>
-			<button id="btn_redirect_terminal" class="btn btn-arduino">
+			<button class="btn btn-arduino" onclick="showHtmlDiv1()">
 			    Console
 			</button>
-			<button id="btn_upload_firmware" class="btn btn-arduino">
+			<button class="btn btn-arduino" onclick="showHtmlDiv2()">
 			    Files
 			</button>
 			<span id="survol" style="color:#fff"></span>
@@ -480,7 +480,7 @@
 <script type="text/javascript">
 
 	var button1 = document.getElementById('btn_console');
-	button1.onclick = function() {
+	function showHtmlDiv1() {
 		var x = document.getElementById("content_console");
 		if (x.style.display === "none") {
 		x.style.display = "block";
@@ -489,7 +489,7 @@
 		}
 	}
 	var button2 = document.getElementById('btn_upload_firmware');
-	button1.onclick = function() {
+	function showHtmlDiv2() {
 		var x = document.getElementById("content_files");
 		if (x.style.display === "none") {
 		x.style.display = "block";
