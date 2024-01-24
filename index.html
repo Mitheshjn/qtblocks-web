@@ -478,23 +478,17 @@
 </body>
 
 <script type="text/javascript">
+var cc = document.getElementById("content_console");
+var cf = document.getElementById("content_files");
 
 	function showHtmlDiv1() {
-		var x = document.getElementById("content_console");
-		if (x.style.display === "none") {
-		x.style.display = "block";
-		} else {
-		x.style.display = "none";
-		}
+	cc.style.display = "block";
+    cf.style.display = "none";
 	}
 	
 	function showHtmlDiv2() {
-		var x = document.getElementById("content_files");
-		if (x.style.display === "none") {
-		x.style.display = "block";
-		} else {
-		x.style.display = "none";
-		}
+	cc.style.display = "none";
+    cf.style.display = "block";
 	}
 
 	var config = {
