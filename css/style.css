@@ -187,7 +187,7 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 .5rem 0 1rem;
+  padding: 0 .3rem 0 1rem;
   user-select: none;
   width: 100vw;
   box-sizing: border-box;
