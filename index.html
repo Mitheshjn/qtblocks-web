@@ -154,10 +154,10 @@
 				<span class="fa fa-arrow-right fa-1_5x fa-fw"> </span>
 			</button>
 			<button id="btn_redirect_terminal" class="btn btn-arduino">
-			    T
+			    Console
 			</button>
 			<button id="btn_upload_firmware" class="btn btn-arduino">
-			    U
+			    Files
 			</button>
 			<span id="survol" style="color:#fff"></span>
 		</div>
@@ -188,7 +188,7 @@
 		</div>
 	</div>
 	
-	<div style="display:none;">
+	<div id="main-content" class="main-content" style="display:none;">
 		<div id="content_console" class="content">
 	       <span class="icon" id="tipsGeneric"><tt>Ctrl+Insert</tt> to copy and <tt>Shift+Insert</tt> to paste</span>
 	    	<tr height="25%" id="termTR">
@@ -261,8 +261,8 @@
 			</div>
 		</div>
 	</div>
+  
   <div>
-
   <div id="file_save_as" class="py">
   <input type=text id=content_file_name placeholder="Filename">
   <button id="editor2DeviceButton" class="button icon text" onclick="Files.files_save_as();">Save</button>
@@ -492,11 +492,16 @@
 <script type="text/javascript">
 
 	document.getElementById('btn_redirect_terminal').addEventListener('click', function() {
-	    window.location.href = 'terminal/';
+	    var x = document.getElementById("main-content");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 	});
 
 	document.getElementById('btn_upload_firmware').addEventListener('click', function() {
-	    window.location.href = 'upload-firmware/';
+	   
 	});
 
 	var config = {
