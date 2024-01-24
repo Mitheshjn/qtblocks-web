@@ -181,7 +181,71 @@ button:focus {
 .hide-sm-up{display: none}
 
 
+/* Top menu */
+.top-menu {
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .5rem 0 1rem;
+  user-select: none;
+  width: 100vw;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+.top-menu > .logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  color: #3298dc;
+}
 
+.top-menu > .logo:before  {
+  content:"";
+  display:inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+  background-size: auto 4rem;
+  background-position: left calc(-2rem*8) top; /* heigth * index in icons.svg */
+}
+
+.top-menu > .tabs {
+  margin: 0 0.5rem;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  padding: .5rem 0;
+}
+.top-menu #channel_connect {
+  display: flex;
+  border-radius: 2rem;
+  border: 1px solid #888;
+  margin-right: .25rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.top-menu #channel_connect > a {
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  border-radius: 2rem;
+  padding: .25rem;
+  border: 1px solid transparent;
+  box-sizing: content-box;
+  margin: -1px;
+  opacity: 0.6;
+}
+.top-menu #channel_connect > a.selected {
+  opacity: 1;
+  border: 1px solid #777;
+  transition: box-shadow ease .125s;
+  background-color: #fff;
+}
+.top-menu #channel_connect:hover  > a.selected{
+  box-shadow: -1px 0 3px  #aaa;
+}
 
 
 
