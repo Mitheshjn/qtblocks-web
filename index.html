@@ -491,18 +491,15 @@
 
 <script type="text/javascript">
 
-	document.getElementById('btn_redirect_terminal').addEventListener('click', function() {
-	    var x = document.getElementById("main-content");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-	});
-
-	document.getElementById('btn_upload_firmware').addEventListener('click', function() {
-	   
-	});
+	var button = document.getElementById('btn_upload_firmware');
+	button.onclick = function() {
+		var x = document.getElementById("main-content");
+		if (x.style.display === "none") {
+		x.style.display = "block";
+		} else {
+		x.style.display = "none";
+		}
+	}
 
 	var config = {
 		microPythonApi: microPythonApi,
