@@ -62,8 +62,24 @@
 }
 
 
+#divBody {
+	position: relative;
+}
 
+.second_page{
+	padding-top: 100px;
+	width: 100%;
+	height: 100px;
+	border: none;
+}
 
+.test{
+	position: absolute;
+	padding-top: 100px;
+	width: 100%;
+	height: 100px;
+	border: none;
+}
 /*----------------------------------------*/
 /*  1.  Theme default CSS
 /*----------------------------------------*/
