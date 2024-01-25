@@ -103,11 +103,11 @@ document.body.appendChild(el);
         <button class="icon" id="channelButton" title="Choose connection channel"></button>
         <button class="icon" id="connectButton" title="Connect/Disconnect"></button>
       </div>
-      <div class="icon" id="deviceSelect">
-        <select id="device_selector">
-          <option value="ESP32">ESP32</option>
+      <div class="icon" id="deviceSelect" style="display: none;">
+        <select id="device_selector" style="display: none;">
+          <option value="ESP32" style="display: none;">ESP32</option>
         </select>
-        <button id="runButton" class="notext primary icon" title="..."></button>
+        <button id="runButton" class="notext primary icon" title="..." style="display: none;"></button>
       </div>
 
         <button id="linkButton" class="notext icon" title="..." style="display: none;"></button>
