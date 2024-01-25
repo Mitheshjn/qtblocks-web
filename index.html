@@ -156,7 +156,8 @@
 			</button>
 			<span id="survol" style="color:#fff"></span>
 			
-			<button onclick="toggleOverlay()">Console & Files</button>
+			<button onclick="toggleOverlay1()">Console & Files</button>
+			<button onclick="toggleOverlay2()">Firmware</button>
 		</div>
 
 
@@ -285,7 +286,8 @@
 		<div role="tabpanel" id="content_code" class="tab-pane fade"></div>
 
 		<div id="content_blocks" style="position: relative;">
-		<iframe width="100%" height="100%" id="overlayIframe" style="display:none;"></iframe>
+		<iframe width="100%" height="100%" id="overlayIframe1" style="display:none;"></iframe>
+		<iframe width="100%" height="100%" id="overlayIframe2" style="display:none;"></iframe>
 		</div>
 	</div>
 	
@@ -428,19 +430,37 @@
 
 
 // second web
-var overlayIframe = document.getElementById("overlayIframe");
+var overlayIframe = document.getElementById("overlayIframe1");
 var overlayIframe2 = document.getElementById("content_blocks");
+var overlayIframe3 = document.getElementById("overlayIframe2");
 
-function toggleOverlay() {
+function toggleOverlay1() {
   if (overlayIframe.style.display === "none") {
     // Show overlay
     overlayIframe.src = "ui/index_offline.html";
     overlayIframe.style.display = "block";
     overlayIframe2.style.display = "none";
+    overlayIframe3.style.display = "none";
   } else {
     // Hide overlay
     overlayIframe.style.display = "none";
     overlayIframe2.style.display = "block";
+    overlayIframe3.style.display = "none";
+  }
+}
+
+function toggleOverlay2() {
+  if (overlayIframe3.style.display === "none") {
+    // Show overlay
+    overlayIframe3.src = "upload-firmware/index.html";
+    overlayIframe3.style.display = "block";
+    overlayIframe2.style.display = "none";
+    overlayIframe.style.display = "none";
+  } else {
+    // Hide overlay
+    overlayIframe.style.display = "none";
+    overlayIframe2.style.display = "block";
+    overlayIframe3.style.display = "none";
   }
 }
 	
