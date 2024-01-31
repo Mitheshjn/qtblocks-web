@@ -46,11 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
   baudRate.addEventListener("change", changeBaudRate);
   darkMode.addEventListener("click", clickDarkMode);
 
-  const setDefaultFileButtons = document.querySelectorAll(".setDefaultFileBtn");
-  setDefaultFileButtons.forEach((button) => {
-    button.addEventListener("click", () => setDefaultFile(button.dataset.fileInput));
-  });
-
   window.addEventListener("error", function (event) {
     console.log("Got an uncaught error: ", event.error);
   });
@@ -176,30 +171,6 @@ function formatMacAddr(macAddr) {
     .map((value) => value.toString(16).toUpperCase().padStart(2, "0"))
     .join(":");
 }
-
-async function setDefaultFile(fileInputId) {
-    let defaultFileName;
-
-    // Determine the default file based on the file input ID
-    switch (fileInputId) {
-      case "firmwareFile1":
-        defaultFileName = "firmware.bin";
-        break;
-      case "firmwareFile2":
-        defaultFileName = "lfs2_image.bin";
-        break;
-      default:
-        console.error("Invalid file input ID");
-        return;
-    }
-
-    const defaultFilePath = "/assets/" + defaultFileName; // Update the path accordingly
-
-    // Set the default file path for the specified firmware input
-    const firmwareInput = document.getElementById(fileInputId);
-    firmwareInput.value = defaultFilePath;
-    checkFirmware({ target: firmwareInput }); // Trigger the checkFirmware function for UI update
-  }
 
 /**
  * @name clickConnect
