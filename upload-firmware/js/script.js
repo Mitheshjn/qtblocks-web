@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
   autoscroll.addEventListener("click", clickAutoscroll);
   baudRate.addEventListener("change", changeBaudRate);
   darkMode.addEventListener("click", clickDarkMode);
-
   window.addEventListener("error", function (event) {
     console.log("Got an uncaught error: ", event.error);
   });
@@ -273,25 +272,36 @@ async function clickErase() {
  * Click handler for the program button.
  */
 async function clickProgram() {
-  const defaultFilePath = firmware[0].value; // Assuming the predefined file is set for the first input
+  const readUploadedFileAsArrayBuffer = (inputFile) => {
+    const reader = new FileReader();
+
+    return new Promise((resolve, reject) => {
+      reader.onerror = () => {
+        reader.abort();
+        reject(new DOMException("Problem parsing input file."));
+      };
+
+      reader.onload = () => {
+        resolve(reader.result);
+      };
+      reader.readAsArrayBuffer(inputFile);
+    });
+  };
 
   baudRate.disabled = true;
   butErase.disabled = true;
   butProgram.disabled = true;
-
   for (let i = 0; i < 4; i++) {
     firmware[i].disabled = true;
     offsets[i].disabled = true;
   }
-
   for (let file of getValidFiles()) {
     progress[file].classList.remove("hidden");
-    let contents = await readUploadedFileAsArrayBuffer(defaultFilePath);
-
+    let binfile = firmware[file].files[0];
+    let contents = await readUploadedFileAsArrayBuffer(binfile);
     try {
       let offset = parseInt(offsets[file].value, 16);
       const progressBar = progress[file].querySelector("div");
-
       await espStub.flashData(
         contents,
         (bytesWritten, totalBytes) => {
@@ -300,24 +310,20 @@ async function clickProgram() {
         },
         offset
       );
-
       await sleep(100);
     } catch (e) {
       errorMsg(e);
     }
   }
-
   for (let i = 0; i < 4; i++) {
     firmware[i].disabled = false;
     offsets[i].disabled = false;
     progress[i].classList.add("hidden");
     progress[i].querySelector("div").style.width = "0";
   }
-
   butErase.disabled = false;
   baudRate.disabled = false;
   butProgram.disabled = getValidFiles().length == 0;
-
   logMsg("To run the new firmware, please reset your device.");
 }
 
