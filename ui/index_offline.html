@@ -88,9 +88,9 @@ document.body.appendChild(el);
 
     
       <div class="tabs">
-        <div id="tab_blocks" class="tabon" style="display: none;">...</div>
-        <div id="tab_console" class="taboff">Console</div>
+        <div id="tab_console" class="tabon">Console</div>
         <div id="tab_files" class="taboff">...</div>
+        <div id="tab_blocks" class="taboff" style="display: none;">...</div>
         <div id="tab_programs" class="taboff" style="display: none;">...</div>
         <div id="tab_device" class="taboff" style="display: none;">...</div>
         <div id="tab_iot" class="taboff" style="display: none;">IOT</div>
@@ -160,7 +160,7 @@ document.body.appendChild(el);
      <td>
         <div id="file-boxes" >
 
-            <button onclick="Tool.runPython(); return false;">Run block based program</button>
+            <button onclick="Tool.runPython(); return false;" style="display:none;">Run block based program</button>
       <br>
       <br>
             <button onclick="Tool.stopPython(); return false;">Stop running program</button>
@@ -300,7 +300,6 @@ bufferPush = mux.bufferPush;
 Tool.clearQueue ();
 
 window.onload = function() {
-	checkCookie()
 	loadPage(); //Load modal splash screen
 
 	var userLang = navigator.language || navigator.userLanguage + " ";
@@ -314,11 +313,6 @@ window.onload = function() {
 		userLang='en';
 	if (!pLang)
 		pLang='en';
-
-	if ((userLang.startsWith("pt")) || (pLang.startsWith("pt"))) {	
-		addMsg="<p><a href=/beta2/ui/?lang=pt-br>Acessar o BIPES em Português</a>";
-		addMsg+=" | <a href=/beta2/ui/?lang=en>Access BIPES in English</a>";
-	}
 
 	if (MSG["splash_welcome"]) 
 		document.getElementById("modalTitle").innerHTML = MSG["splash_welcome"];
@@ -491,26 +485,7 @@ function closeModal() {
 	  modal.style.display = "none";
 }
 
-function loadPage() {
-	var x = getCookieModal('BIPES_Splash');
-	if (x) {
-		console.log('Not showing splash');
-	} else {
-		console.log('Showing splash');
-		modal.style.display = "block";
-	}
-}
 
-function doalert(checkboxElem) {
-
-	if (checkboxElem.checked) {
-		setCookieModal('BIPES_Splash','BIPES_SplashC',1);
-		console.log('Modal Cookie Set');
-	} else {
-		eraseCookieModal('BIPES_Splash');
-		console.log('Modal Cookie deleted');
-	}
-}
 
 
 </script>
